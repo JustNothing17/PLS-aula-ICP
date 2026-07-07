@@ -53,8 +53,6 @@ cat("\n====================================================")
 cat("\nDesempenho sPLS -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
 cat("====================================================\n")
 
-print(tabela_limpa)
-
 # 8. Gráfico de Validação
 plot(tabela_limpa$Valor_Real, tabela_limpa$Valor_Predito,
      xlab = "API Real ", ylab = "API Predito ",
