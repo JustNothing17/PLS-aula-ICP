@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# SCRIPT 7: SPARSE PLS (sPLS) COM 1ª DERIVADA E SNV
+# SCRIPT 9: SPARSE PLS (sPLS) COM 1ª DERIVADA E SNV
 # ------------------------------------------------------------------------------
 
 if(!require(spls)) install.packages("spls")
@@ -62,10 +62,6 @@ rmse_tot <- sqrt(mean((tabela_resultados$Valor_Real - tabela_resultados$Valor_Pr
 cat("\n====================================================")
 cat("\nDesempenho sPLS (1ª Derivada) -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
 cat("====================================================\n")
-
-# Mostrar como o algoritmo sPLS se comportou nas pontas críticas
-
-print(tabela_resultados)
 
 # 8. Gráfico de Validação
 plot(valores_reais, valores_preditos,
