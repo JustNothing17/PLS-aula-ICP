@@ -71,19 +71,20 @@ tabela_final <- data.frame(
 )
 
 # 8. Exibir desempenho
+print("--- TABELA DE PREDIÇÕES RFE-PLS ---")
 print(tabela_final)
 r2_tot <- cor(tabela_final$Valor_Real, tabela_final$Valor_Predito)^2
 rmse_tot <- sqrt(mean((tabela_final$Valor_Real - tabela_final$Valor_Predito)^2))
 
 cat("\n====================================================")
-cat("\nDesempenho sPLS -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
+cat("\nDesempenho RFE-PLS -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
 cat("====================================================\n")
 
 print(tabela_final)
 
 # 9. Gráfico de Validação
 plot(valores_reais, valores_preditos,
-     xlab = "API Real", ylab = "API Predita (Filtro Espectral + PLS)",
+     xlab = "API Real", ylab = "API Predita",
      main = "PLS Linear com Seleção de Variáveis por Filtro",
      pch = 19, col = "darkblue")
 abline(0, 1, col = "red", lwd = 2)
