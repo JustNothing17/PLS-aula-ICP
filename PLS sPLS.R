@@ -50,7 +50,7 @@ r2_tot <- cor(tabela_limpa$Valor_Real, tabela_limpa$Valor_Predito, use = "comple
 rmse_tot <- sqrt(mean((tabela_limpa$Valor_Real - tabela_limpa$Valor_Predito)^2))
 
 cat("\n====================================================")
-cat("\nDesempenho sPLS (Estabilizado) -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
+cat("\nDesempenho sPLS -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
 cat("====================================================\n")
 
 print(tabela_limpa)
