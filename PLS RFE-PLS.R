@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# SCRIPT CORRIGIDO: FILTRO DE IMPORTÂNCIA (RFE-PLS)
+# SCRIPT 5: FILTRO DE IMPORTÂNCIA (RFE-PLS)
 # ------------------------------------------------------------------------------
 
 if(!require(pls)) install.packages("pls")
