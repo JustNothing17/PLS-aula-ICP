@@ -74,7 +74,12 @@ tabela_final <- data.frame(
 print(tabela_final)
 r2_tot <- cor(tabela_final$Valor_Real, tabela_final$Valor_Predito)^2
 rmse_tot <- sqrt(mean((tabela_final$Valor_Real - tabela_final$Valor_Predito)^2))
-cat("\nDesempenho GERAL -> R²:", round(r2_tot, 3), "| RMSE:", round(rmse_tot, 2), "\n")
+
+cat("\n====================================================")
+cat("\nDesempenho sPLS -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
+cat("====================================================\n")
+
+print(tabela_final)
 
 # 9. Gráfico de Validação
 plot(valores_reais, valores_preditos,
