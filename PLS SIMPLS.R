@@ -63,7 +63,10 @@ print(tabela_resultados)
 # Calcular R² e RMSE para comparação
 r2_tot <- cor(tabela_resultados$Valor_Real, tabela_resultados$Valor_Predito)^2
 rmse_tot <- sqrt(mean((tabela_resultados$Valor_Real - tabela_resultados$Valor_Predito)^2))
-cat("\nDesempenho GERAL -> R²:", round(r2_tot, 3), "| RMSE:", round(rmse_tot, 2), "\n")
+
+cat("\n====================================================")
+cat("\nDesempenho sPLS -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
+cat("====================================================\n")
 
 # 8. Gráfico de Validação
 plot(valores_reais, valores_preditos,
