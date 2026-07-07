@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# SCRIPT CORRIGIDO: FILTRO DE IMPORTÂNCIA (RFE-PLS) COM 1ª DERIVADA
+# SCRIPT 10: FILTRO DE IMPORTÂNCIA (RFE-PLS) COM 1ª DERIVADA
 # ------------------------------------------------------------------------------
 if(!require(pls)) install.packages("pls")
 if(!require(caret)) install.packages("caret")
@@ -80,10 +80,6 @@ rmse_tot <- sqrt(mean((tabela_final$Valor_Real - tabela_final$Valor_Predito)^2))
 cat("\n====================================================")
 cat("\nDesempenho Geral do Modelo -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
 cat("====================================================\n")
-
-# Mostrar o comportamento nas fatias críticas do seu estudo
-print("--- CONFERÊNCIA NAS EXTREMIDADES (<20 E >50 API) ---")
-print(tabela_final)
 
 # 9. Gráfico de Validação
 plot(valores_reais, valores_preditos,
