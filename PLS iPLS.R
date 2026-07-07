@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# SCRIPT 3: iPLS DE INTERVALO ÚNICO 
+# SCRIPT 3: iPLS DE INTERVALO ÚNICO (SEM TRATAMENTO)
 # ------------------------------------------------------------------------------
 if(!require(pls)) install.packages("pls")
 if(!require(caret)) install.packages("caret")
