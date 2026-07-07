@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# SCRIPT: IPLS POR FUSÃO DE INTERVALOS (CONSERVAÇÃO DAS EXTREMIDADES)
+# SCRIPT 8: IPLS POR FUSÃO DE INTERVALOS
 # ------------------------------------------------------------------------------
 if(!require(pls)) install.packages("pls")
 if(!require(caret)) install.packages("caret")
