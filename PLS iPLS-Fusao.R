@@ -85,7 +85,7 @@ tabela_resultados <- data.frame(
 )
 
 # 7. Exibir desempenho
-print("--- iPLS POR FUSÃO DE INTERVALOS ---")
+print("--- TABELA DE PREDIÇÕES iPLS POR FUSÃO DE INTERVALOS ---")
 print(tabela_resultados)
 
 # Calcular R² e RMSE para comparação
