@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# SCRIPT 2 CORRIGIDO: PENALIZED PLS (P-PLS) COM 1ª DERIVADA e SNV
+# SCRIPT 7: PENALIZED PLS (P-PLS) COM 1ª DERIVADA e SNV
 # ------------------------------------------------------------------------------
 
 # 1. Carregar pacotes necessários
@@ -58,7 +58,7 @@ tabela_resultados <- data.frame(
   Erro_Absoluto = round(abs(valores_reais - valores_preditos), 2)
 )
 
-print("--- PREDIÇÕES PENALIZED PLS (P-PLS CORRIGIDO) ---")
+print("--- PREDIÇÕES PENALIZED PLS COM 1ª DERIVADA e SNV ---")
 print(tabela_resultados)
 
 # 7. Calcular R² e RMSE para comparação (CORRIGIDO)
@@ -68,10 +68,6 @@ rmse_tot <- sqrt(mean((tabela_resultados$Valor_Real - tabela_resultados$Valor_Pr
 cat("\n====================================================")
 cat("\nDesempenho GERAL P-PLS -> R²:", round(r2_tot, 4), "| RMSE:", round(rmse_tot, 2), "API\n")
 cat("====================================================\n")
-
-# Verificação focalizada nas extremidades críticas do seu projeto
-print("--- VERIFICAÇÃO  ---")
-print(tabela_resultados)
 
 # 8. Gráfico de Validação
 plot(valores_reais, valores_preditos,
