@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# SCRIPT 8: IPLS POR FUSÃO DE INTERVALOS
+# SCRIPT 8: iPLS POR FUSÃO DE INTERVALOS
 # ------------------------------------------------------------------------------
 if(!require(pls)) install.packages("pls")
 if(!require(caret)) install.packages("caret")
@@ -85,6 +85,7 @@ tabela_resultados <- data.frame(
 )
 
 # 7. Exibir desempenho
+print("--- iPLS POR FUSÃO DE INTERVALOS ---")
 print(tabela_resultados)
 
 # Calcular R² e RMSE para comparação
